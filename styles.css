@@ -135,19 +135,26 @@ a:focus-visible {
   transform: rotate(45deg);
 }
 
+/* On phones the menu spans the full width in one tidy row */
+.site-header nav {
+  width: 100%;
+}
+
 .nav-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.25rem 1rem;
+  justify-content: space-between;
+  gap: 0.25rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow-x: auto;          /* very narrow screens can swipe instead of breaking */
 }
 
 .nav-list a {
   display: block;
-  padding: 0.35rem 0.25rem;
+  padding: 0.45rem 0.3rem;   /* comfortable tap target */
+  font-size: 0.92rem;
+  white-space: nowrap;
   color: var(--text);
   font-weight: 500;
   text-decoration: none;
@@ -239,6 +246,159 @@ a:focus-visible {
   margin: 0;
 }
 
+/* ---------- Inner-page banner (About, Services, Gallery, Contact) ---------- */
+.page-hero {
+  background: linear-gradient(135deg, var(--blue-900), var(--blue-700));
+  color: var(--white);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  color: var(--white);
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  opacity: 0.92;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/* General page section */
+.section {
+  padding: 3rem 0;
+}
+
+.section-alt {
+  background: var(--blue-50);
+}
+
+.section h2 {
+  font-size: 1.6rem;
+}
+
+/* Keeps long paragraphs at a readable width */
+.prose {
+  max-width: 44rem;
+}
+
+.prose p {
+  color: var(--text);
+}
+
+/* ---------- About: reasons to choose us ---------- */
+.reasons {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.reason {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--blue-700);
+}
+
+.reason h3 {
+  font-size: 1.15rem;
+}
+
+.reason p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Call-to-action strip */
+.cta {
+  text-align: center;
+}
+
+.cta .btn {
+  width: 100%;
+}
+
+.btn-solid {
+  background: var(--blue-700);
+  color: var(--white);
+}
+
+.btn-solid:hover,
+.btn-solid:focus {
+  background: var(--blue-900);
+}
+
+/* ---------- Services page: 6 cards ---------- */
+.services-full {
+  text-align: left;
+}
+
+.services-full .service-grid {
+  margin-bottom: 0;
+}
+
+/* ---------- Gallery ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  margin: 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Same size rules for the placeholder and a real <img>, so swapping is easy */
+.gallery-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #cfe2f8, #9fc5ef);
+  color: var(--blue-900);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.gallery-item figcaption {
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* ---------- Contact ---------- */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+}
+
+.contact-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e3ebf5;
+}
+
+.contact-list strong {
+  display: block;
+  color: var(--blue-900);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--blue-900);
@@ -260,8 +420,18 @@ a:focus-visible {
     width: auto;
   }
 
-  .service-grid {
+  .service-grid,
+  .gallery-grid,
+  .reasons {
     grid-template-columns: repeat(2, 1fr);  /* two columns */
+  }
+
+  .cta .btn {
+    width: auto;
+  }
+
+  .page-hero h1 {
+    font-size: 2.4rem;
   }
 }
 
@@ -272,6 +442,18 @@ a:focus-visible {
   .header-inner {
     flex-direction: row;          /* logo left, menu right */
     justify-content: space-between;
+  }
+
+  .site-header nav {
+    width: auto;
+  }
+
+  .nav-list {
+    gap: 1.25rem;
+  }
+
+  .nav-list a {
+    font-size: 1rem;
   }
 
   .hero {
@@ -287,5 +469,12 @@ a:focus-visible {
 
   .service-grid {
     grid-template-columns: repeat(4, 1fr);  /* four columns */
+  }
+
+  /* 6 services and 6 photos look best as 3 + 3 */
+  .services-full .service-grid,
+  .gallery-grid,
+  .reasons {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
