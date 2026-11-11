@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Contact | AquaFlow Plumbing Johannesburg</title>
-  <meta name="description" content="Contact AquaFlow Plumbing in Johannesburg.">
+  <meta name="description" content="Contact AquaFlow Plumbing in Johannesburg. Call, WhatsApp or send an enquiry for a quote.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,19 +32,108 @@
     <section class="page-hero">
       <div class="container">
         <h1>Contact us</h1>
-        <p>We're here to help. Give us a call.</p>
+        <p>Call, WhatsApp or send us an enquiry and we'll get back to you with a quote.</p>
       </div>
     </section>
 
-    <!-- Placeholder details: replace with the real ones -->
-    <section class="section">
-      <div class="container prose">
-        <ul class="contact-list">
-          <li><strong>Phone</strong> <a href="tel:+27110000000">011 000 0000</a></li>
-          <li><strong>Area</strong> Johannesburg and surrounds</li>
-          <li><strong>Hours</strong> Monday to Saturday, 7am – 6pm</li>
-        </ul>
-        <a href="tel:+27110000000" class="btn btn-solid">Call us now</a>
+    <section class="section section-alt">
+      <div class="container contact-layout">
+
+        <!-- Contact details (PLACEHOLDERS: replace with the real details) -->
+        <div class="contact-details">
+          <h2>Get in touch</h2>
+          <ul class="contact-list">
+            <li>
+              <strong>Phone</strong>
+              <a href="tel:+27110000000">011 000 0000</a>
+            </li>
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li>
+              <strong>Service area</strong>
+              We cover Johannesburg and surrounds, including Sandton, Randburg,
+              Roodepoort, Midrand, Soweto and the East Rand. Not sure if we reach
+              you? Just ask.
+            </li>
+            <li>
+              <strong>Hours</strong>
+              Monday to Saturday, 7am – 6pm
+            </li>
+          </ul>
+          <a href="tel:+27110000000" class="btn btn-solid">Call us now</a>
+        </div>
+
+        <!-- Enquiry form -->
+        <div class="form-card">
+          <h2>Send an enquiry</h2>
+          <p class="form-note">Fields marked <span aria-hidden="true">*</span> are required.</p>
+
+          <!--
+            ============================================================
+            FORM ACTION: CHANGE THIS before the site goes live.
+            Replace the placeholder URL in action="..." below with the
+            address of your form service (e.g. Formspree, Netlify Forms,
+            or the client's own server script).
+            ============================================================
+          -->
+          <form class="enquiry-form" action="https://formspree.io/f/meagqkyv" method="POST">
+
+            <div class="form-field">
+              <label for="name">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required maxlength="100">
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required
+                     pattern="[0-9+\(\)\s\-]{10,16}"
+                     title="Please enter a valid phone number, e.g. 082 123 4567"
+                     placeholder="e.g. 082 123 4567">
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required
+                     placeholder="you@example.com">
+            </div>
+
+            <div class="form-field">
+              <label for="service">Service needed <span aria-hidden="true">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">Please choose…</option>
+                <option>Leak detection &amp; repairs</option>
+                <option>Geyser installation &amp; repairs</option>
+                <option>Blocked drains</option>
+                <option>Bathroom &amp; kitchen fittings</option>
+                <option>Burst pipes</option>
+                <option>New installations &amp; renovations</option>
+                <option>Other / not sure</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" required maxlength="2000"
+                        placeholder="Tell us what's wrong and where you're located."></textarea>
+            </div>
+
+            <!--
+              Spam trap ("honeypot"): hidden from real visitors.
+              Spam bots tend to fill in every field, so any submission
+              where this field is NOT empty should be thrown away.
+              Your form service must be set up to check this field.
+            -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn-solid btn-block">Send enquiry</button>
+          </form>
+        </div>
+
       </div>
     </section>
   </main>
@@ -55,6 +144,21 @@
       <p>&copy; 2026 AquaFlow Plumbing · Johannesburg, South Africa</p>
     </div>
   </footer>
+
+  <!--
+    WhatsApp button (same on every page).
+    WHATSAPP NUMBER: CHANGE IT HERE. Put the number after "wa.me/" in
+    international format: country code 27, no leading 0, no spaces or +
+    (e.g. 082 123 4567 becomes 27821234567).
+  -->
+  <a class="whatsapp-btn"
+     href="https://wa.me/27820000000?text=Hi%20AquaFlow%2C%20I%E2%80%99d%20like%20a%20quote"
+     target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.13-1.32A10 10 0 1 0 12 2z"/>
+    </svg>
+    <span class="whatsapp-label">WhatsApp us</span>
+  </a>
 
 </body>
 </html>
