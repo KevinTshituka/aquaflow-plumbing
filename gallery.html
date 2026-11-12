@@ -3,8 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Gallery | AquaFlow Plumbing Johannesburg</title>
-  <meta name="description" content="Photos of recent plumbing jobs completed by AquaFlow Plumbing in Johannesburg.">
+  <title>Recent Plumbing Jobs in Johannesburg | AquaFlow Plumbing</title>
+  <meta name="description" content="Photos of geyser installs, bathroom renovations and pipe repairs completed by AquaFlow Plumbing for homes and businesses in Johannesburg.">
+
+  <!--
+    DOMAIN: "https://www.example.com" is a placeholder. Once the real domain
+    is live, replace it in the canonical link and the og:url / og:image tags
+    below (and in sitemap.xml, robots.txt and the home page's structured data).
+  -->
+  <link rel="canonical" href="https://www.example.com/gallery.html">
+
+  <!-- Open Graph: controls the preview when this page is shared on WhatsApp, Facebook, LinkedIn etc. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AquaFlow Plumbing">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Recent Plumbing Jobs in Johannesburg | AquaFlow Plumbing">
+  <meta property="og:description" content="Photos of geyser installs, bathroom renovations and pipe repairs completed by AquaFlow Plumbing for homes and businesses in Johannesburg.">
+  <meta property="og:url" content="https://www.example.com/gallery.html">
+  <meta property="og:image" content="https://www.example.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AquaFlow Plumbing logo with the text: Fast, reliable plumbing in Johannesburg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (browser tab) and home-screen icon for phones -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#0b2e59">
+
+  <!-- Only one small stylesheet; the site uses the device's built-in fonts, so no font files are downloaded -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,7 +58,7 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <h1>Our work</h1>
+        <h1>Recent plumbing jobs</h1>
         <p>A few of the jobs we've completed around Johannesburg.</p>
       </div>
     </section>
@@ -39,8 +66,22 @@
     <section class="section section-alt">
       <div class="container">
         <!--
-          To add a real photo, replace a placeholder <div> with:
-          <img class="gallery-photo" src="images/your-photo.jpg" alt="Describe the photo">
+          ADDING REAL PHOTOS: replace a placeholder <div> with an <img> like this:
+
+          <img class="gallery-photo"
+               src="images/geyser-randburg.webp"
+               alt="Newly installed 150-litre geyser with drip tray in a Randburg roof space"
+               width="1200" height="900"
+               loading="lazy" decoding="async">
+
+          - alt: describe what is actually in the photo (what, where), as if
+            telling someone who can't see it. Don't just repeat "plumbing Johannesburg".
+          - width/height: the photo's real pixel size (4:3 shape fits the grid best).
+            This stops the page jumping around while photos load.
+          - loading="lazy": photos further down only download when scrolled to.
+            Leave it off the first one or two photos if they appear at the top of the screen.
+          - Resize photos to about 1200px wide and save as WebP or compressed JPEG
+            (aim for under 200 KB each) before uploading.
         -->
         <div class="gallery-grid">
           <figure class="gallery-item">

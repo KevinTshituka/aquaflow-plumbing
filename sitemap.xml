@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml: a list of every page on the site, so search engines can find them all.
+
+  DOMAIN: "https://www.example.com" is a placeholder. Once the real domain is
+  live, replace it in every <loc> line below (use find-and-replace), then submit
+  https://YOUR-DOMAIN/sitemap.xml in Google Search Console.
+
+  When you add a new page, add a new <url> block for it. Update <lastmod>
+  (YYYY-MM-DD) when a page's content changes.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.example.com/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.com/about.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.com/services.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.com/gallery.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.com/contact.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+</urlset>

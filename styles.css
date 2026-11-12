@@ -237,7 +237,9 @@ a:focus-visible {
   margin-bottom: 0.5rem;
 }
 
-.service-card h3 {
+/* Card titles are h3 on the home page and h2 on the Services page; same size either way */
+.service-grid .service-card h2,
+.service-grid .service-card h3 {
   font-size: 1.15rem;
 }
 

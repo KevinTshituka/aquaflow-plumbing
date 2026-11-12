@@ -1,0 +1,10 @@
+# robots.txt: tells search engines which pages they may visit.
+# Everything on this site is public, so all pages are allowed.
+#
+# DOMAIN: "https://www.example.com" is a placeholder. Once the real domain
+# is live, replace it in the Sitemap line below.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.example.com/sitemap.xml
