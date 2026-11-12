@@ -157,8 +157,36 @@
               <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
             </div>
 
+            <!-- POPIA consent: must be ticked before the form can be sent -->
+            <div class="form-field form-check">
+              <input type="checkbox" id="consent" name="consent" value="yes" required>
+              <label for="consent">
+                I agree that AquaFlow Plumbing may use my details to respond to my enquiry, as explained in the
+                <a href="privacy.html" target="_blank" rel="noopener">privacy notice<span class="visually-hidden"> (opens in a new tab)</span></a>.
+                <span aria-hidden="true">*</span>
+              </label>
+            </div>
+
             <button type="submit" class="btn btn-solid btn-block">Send enquiry</button>
           </form>
+
+          <!--
+            POPIA short notice. PLACEHOLDERS (HANDOVER CHECKLIST):
+            - [REGISTERED BUSINESS NAME]: the client's legal/registered name (e.g. "AquaFlow Plumbing (Pty) Ltd")
+            - privacy@example.com: the client's email for privacy requests (also in privacy.html)
+            - "12 months": confirm how long the client actually keeps enquiries (also in privacy.html)
+          -->
+          <div class="privacy-note">
+            <h3>Your privacy</h3>
+            <p>
+              We collect your name, phone number, email and message only to reply to your enquiry.
+              Your details are sent to [REGISTERED BUSINESS NAME] through our form service, Formspree,
+              and are not sold or shared for marketing. We keep enquiries for up to 12 months.
+              You can ask to see, correct or delete your information at any time by emailing
+              <a href="mailto:privacy@example.com">privacy@example.com</a>.
+              Read our full <a href="privacy.html">privacy notice</a>.
+            </p>
+          </div>
         </div>
 
       </div>
@@ -169,6 +197,7 @@
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2026 AquaFlow Plumbing · Johannesburg, South Africa</p>
+      <p class="footer-links"><a href="privacy.html">Privacy notice</a></p>
     </div>
   </footer>
 
